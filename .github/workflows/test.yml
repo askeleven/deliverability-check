@@ -16,6 +16,11 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node }}
-      # Tests use fixture DNS and never touch the network, so there is nothing to
-      # install and no flakiness from a resolver.
+      # devDependencies are typescript only; nothing ships at runtime.
+      - run: npm ci --no-audit --no-fund
+      # Tests use fixture DNS and never touch the network, so no resolver
+      # flakiness and no reason to skip them on any Node version.
       - run: node --test
+      # The published .d.ts files are generated from the JSDoc in src/, so a
+      # wrong annotation is a real defect and CI has to catch it.
+      - run: npx tsc -p tsconfig.json --noEmit

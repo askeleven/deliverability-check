@@ -1,6 +1,6 @@
 {
   "name": "@askeleven/deliverability-check",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Check whether a domain is set up so its email actually arrives. SPF, DKIM, DMARC, MX, BIMI, blocklists. Zero dependencies, no signup, no data kept.",
   "type": "module",
   "license": "MIT",
@@ -34,6 +34,7 @@
   "files": [
     "bin",
     "src",
+    "types",
     "README.md",
     "LICENSE"
   ],
@@ -41,6 +42,13 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "build:types": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build:types && npm test"
+  },
+  "types": "types/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^22.20.2",
+    "typescript": "^5.9.3"
   }
 }
