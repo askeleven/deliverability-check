@@ -1,0 +1,46 @@
+{
+  "name": "@askeleven/deliverability-check",
+  "version": "0.1.0",
+  "description": "Check whether a domain is set up so its email actually arrives. SPF, DKIM, DMARC, MX, BIMI, blocklists. Zero dependencies, no signup, no data kept.",
+  "type": "module",
+  "license": "MIT",
+  "author": "AskEleven",
+  "homepage": "https://github.com/askeleven/deliverability-check",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/askeleven/deliverability-check.git"
+  },
+  "bugs": {
+    "url": "https://github.com/askeleven/deliverability-check/issues"
+  },
+  "keywords": [
+    "spf",
+    "dkim",
+    "dmarc",
+    "bimi",
+    "email",
+    "deliverability",
+    "dns",
+    "can-spam",
+    "casl"
+  ],
+  "bin": {
+    "deliverability-check": "bin/cli.js"
+  },
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}
