@@ -1,6 +1,6 @@
 {
   "name": "@askeleven/deliverability-check",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Check whether a domain is set up so its email actually arrives. SPF, DKIM, DMARC, MX, BIMI, blocklists. Zero dependencies, no signup, no data kept.",
   "type": "module",
   "license": "MIT",
@@ -29,7 +29,10 @@
   },
   "main": "src/index.js",
   "exports": {
-    ".": "./src/index.js"
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./src/index.js"
+    }
   },
   "files": [
     "bin",
