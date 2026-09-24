@@ -1,5 +1,7 @@
 # deliverability-check
 
+![deliverability-check: find out why your email is going to spam](https://raw.githubusercontent.com/askeleven/deliverability-check/main/docs/social-preview.png)
+
 **Find out why your email is going to spam, and what specifically to change.**
 
 ```bash
