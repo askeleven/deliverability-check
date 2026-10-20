@@ -27,7 +27,7 @@ read the whole thing in about ten minutes and confirm that.
 
 ## What it does not do
 
-**It does not give you a score.** A score invites you to optimise a number, and the
+**It does not give you a score.** A score invites you to optimize a number, and the
 number would be made up: a missing DMARC record and a 1024-bit DKIM key are not
 commensurable, so any weighting between them is arbitrary. You get findings, each with
 its own severity and its own fix.
@@ -149,4 +149,4 @@ Run the tests with `npm test`. They use fixture DNS, so they are offline and fas
 MIT. See [LICENSE](LICENSE).
 
 The compliance checklist is a summary of obligations, not legal advice. Talk to a lawyer
-before running an outreach programme.
+before running an outreach program.
