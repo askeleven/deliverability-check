@@ -4,6 +4,7 @@ import { check, normaliseDomain } from '../src/index.js'
 import { createResolver } from '../src/resolver.js'
 import { formatText, formatChecklist } from '../src/report.js'
 import { complianceChecklist } from '../src/compliance.js'
+import { starHint } from './star-hint.js'
 
 const USAGE = `
 deliverability-check <domain>
@@ -122,6 +123,7 @@ function useColour(values) {
 main(process.argv.slice(2)).then(
   (code) => {
     process.exitCode = code
+    starHint('deliverability-check', code, process.argv.slice(2))
   },
   (error) => {
     process.stderr.write(`${error?.stack ?? error}\n`)
