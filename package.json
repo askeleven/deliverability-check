@@ -1,6 +1,6 @@
 {
   "name": "@askeleven/deliverability-check",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Check whether a domain is set up so its email actually arrives. SPF, DKIM, DMARC, MX, BIMI, blocklists. Zero dependencies, no signup, no data kept.",
   "type": "module",
   "license": "MIT",
